@@ -1,0 +1,42 @@
+<div class="d-flex flex-row bd-highlight mb-9">
+    <div class="p-2 w-100 bd-highlight">
+  
+      <div class="input-group mb-12">
+        <div class="col-md-12">
+          <div class="col-md-3">
+            <span>Name</span>
+          </div>
+          <div class="col-md-6">
+            <input style="border: solid;" type="text" class="form-control" [(ngModel)]="Name">
+          </div>
+          
+        </div>
+        
+        <div class="col-md-12">
+          <div class="col-md-3">
+            <span>Price</span>
+          </div>
+          <div class="col-md-6">
+            <input style="border: solid;" type="number" class="form-control" [(ngModel)]="Price">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="col-md-3">
+            <span>Description</span>
+          </div>
+          <div class="col-md-6">
+            <input style="border: solid;" type="text" class="form-control" [(ngModel)]="Description">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <button (click)="addProduct()" *ngIf="product.Id == ''" class="btn btn-primary">
+    Add
+  </button>
+  
+  <button (click)="updateProduct()" *ngIf="product.Id !=''" class="btn btn-primary">
+    Update
+  </button>
+
